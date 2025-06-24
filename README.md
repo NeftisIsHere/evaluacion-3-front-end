@@ -1,12 +1,22 @@
-# React + Vite
+# Evaluación 3 - Programación Front End (SPA)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web para gestionar evaluaciones de estudiantes. Permite:
 
-Currently, two official plugins are available:
+- **Agregar** nuevas evaluaciones con nombre del alumno, asignatura y el promedio (1.0 a 7.0)
+- **Editar** evaluaciones existentes
+- **Eliminar** evaluaciones
+- **Visualizar** el rendimiento académico con categorías automáticas:
+  - 1.0-3.9: Deficiente
+  - 4.0-5.5: Con mejora
+  - 5.6-6.4: Buen Trabajo
+  - 6.5-7.0: Destacado
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Los datos se guardan en el localStorage del navegador para persistencia entre sesiones.
 
-## Expanding the ESLint configuration
+# Creación del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Se han utilizado las siguientes tecnologías:
+
+- React
+- JavaScript
+- HTML/CSS
