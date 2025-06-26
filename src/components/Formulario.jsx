@@ -46,13 +46,14 @@ export default function Formulario({addOrUpdateDatos, datosToEdit}){
         <form onSubmit={handleSubmit}>
             <h2>{datosToEdit  
             ? 'Editar Evaluación' 
-            : 'Agregar Evaluación'}</h2>
+            : 'Agregar Nueva    Evaluación'}</h2>
             <div>
                 <label>Nombre del Alumno:</label>
                 <input 
                 type="text"
                 name="name"
                 value={inputValue.name}
+                placeholder="Ej: Jazmin Vallejos"
                 onChange={handleChange}
                 required
                 />
@@ -63,16 +64,18 @@ export default function Formulario({addOrUpdateDatos, datosToEdit}){
                 type="text"
                 name="subject"
                 value={inputValue.subject}
+                placeholder="Ej: Introducción a la Programación"
                 onChange={handleChange}
                 required
                 />
             </div>
             <div>
-                <label>Promedio(0.0 - 7.0)</label>
+                <label>Promedio(1.0 - 7.0)</label>
                 <input 
                 type="number"
                 name="grade"
                 value={inputValue.grade}
+                placeholder="Ej: 6.5"
                 onChange={handleChange}
                 min="1"
                 max="7"
@@ -80,7 +83,10 @@ export default function Formulario({addOrUpdateDatos, datosToEdit}){
                 required
                 />
             </div>
-            <button type="submit">{datosToEdit 
+            <button 
+            type="submit"
+            className="submit-button"
+            >{datosToEdit 
             ? 'Actualizar Evaluación' 
             : 'Agregar Evaluación'}</button>
 

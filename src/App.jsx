@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+// import './App.css';
 import Formulario from './components/Formulario';
 import Lista from './components/List';
 
@@ -51,22 +51,27 @@ export default function App() {
 
   return (
     <>
-      <h1 className='main-title'>Evaluación de Alumnos</h1>
+      <div className='container'>
+        <h1 className='main-title'>Evaluación de Alumnos</h1>
 
-      <div className="add-exams">
-          <Formulario
-            addOrUpdateDatos={addOrUpdateDatos}
-            datosToEdit={datosToEdit}
-          />
+        <div className="form-section">
+            <Formulario
+              addOrUpdateDatos={addOrUpdateDatos}
+              datosToEdit={datosToEdit}
+            />
+        </div>
+
+        <div className='list-section'>
+          <h2>Evaluaciones Guardadas</h2>
+            { datos === null 
+            ? (<p>Cargando datos...</p>)
+            : <Lista 
+            datos={datos} 
+            deleteEntrada={deleteEntrada}
+            editEntrada={editEntrada}/>}
+        </div>
       </div>
 
-      <div className='show-exams'>
-          { datos === null ? (<p>Cargando datos...</p>)
-          : <Lista 
-          datos={datos} 
-          deleteEntrada={deleteEntrada}
-          editEntrada={editEntrada}/>}
-      </div>
     </>
   )
 }

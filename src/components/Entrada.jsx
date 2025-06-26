@@ -12,14 +12,17 @@ export default function Entrada( { entrada, deleteEntrada, editEntrada} ) {
         rendimiento = "Destacado."
     }
     return (
-        <li>
-            <div>
-                <strong>Alumno: {entrada.value.name}</strong> | 
-                Asignatura: {entrada.value.subject} | 
-                Promedio: {entrada.value.grade} | 
-                {rendimiento}
+        <li className="entrada-item">
+            <div className="entrada-contenido">
+                <p><strong>Alumno: {entrada.value.name}</strong></p>
+                <p>Asignatura: {entrada.value.subject} </p>
+                <p>Promedio: {entrada.value.grade}</p>
+                <span className={
+                    `tag tag-${rendimiento.toLowerCase().replace(" ", "-")}`}>
+                    {rendimiento}
+                </span>
             </div>
-            <div>
+            <div className="entrada-botones">
                 <button className='edit-button'onClick={()=> (editEntrada(entrada))}> Editar</button>
                 <button className="delete-button" onClick={()=> (deleteEntrada(entrada.id))}> Eliminar</button>
             </div>

@@ -2,7 +2,7 @@ import Entrada from "./Entrada";
 
 export default function Lista( {datos, deleteEntrada, editEntrada} ) {
     return (
-        <ul>
+        <ul className="lista-ul">
             {datos.map((entrada) => (
                 <Entrada
                     key={entrada.id}
