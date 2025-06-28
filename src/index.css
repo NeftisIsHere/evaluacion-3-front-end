@@ -3,8 +3,8 @@
 /* ==================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-*, 
-:before, 
+*,
+:before,
 ::after {
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1000px; /* o 1000px si quieres aún más diferencia */
+  max-width: 1000px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -59,12 +59,13 @@ form {
 
 form h2 {
   text-align: center;
+  margin: 0 0 1em 0;
 }
 
 form div {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 input {
@@ -118,6 +119,8 @@ input::placeholder {
 .list-section h2 {
   text-align: center;
   font-size: 1.5em;
+  margin: 0 0 1em 0;
+
 }
 
 .lista-ul {
@@ -151,7 +154,7 @@ li {
 
 .tag {
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: 0.5em;
   font-size: 0.8em;
   padding: 0.2em 0.6em;
   background-color: #e0e7ff;
@@ -159,6 +162,27 @@ li {
   border-radius: 6px;
   font-weight: 600;
 }
+
+.tag-deficiente {
+  background-color: #fee2e2;
+  color: #e83333;
+}
+
+.tag-con-mejora {
+  background-color: #ffedd5;
+  color: #e6511f;
+}
+
+.tag-buen-trabajo {
+  background-color: #dbeafe;
+  color: #3b5fd4;
+}
+
+.tag-destacado {
+  background-color: #dcfce7;
+  color: #27ac3f;
+}
+
 
 .entrada-contenido {
   margin: 0.15em 0;
@@ -172,7 +196,7 @@ li {
 .entrada-botones {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.5em;
   align-self: center;
 }
 

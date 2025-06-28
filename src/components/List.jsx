@@ -1,6 +1,6 @@
 import Entrada from "./Entrada";
 
-export default function Lista( {datos, deleteEntrada, editEntrada} ) {
+export default function Lista({ datos, deleteEntrada, editEntrada }) {
     return (
         <ul className="lista-ul">
             {datos.map((entrada) => (
